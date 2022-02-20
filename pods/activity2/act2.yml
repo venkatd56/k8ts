@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: activity2-sql
+spec:
+  containers:
+    - name: activity2-sql
+      image: mysql:8.0
+      ports:
+        - containerPort: 3306
+          protocol: 'TCP'
+      env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: root123
+        - name: MYSQL_DATABASE
+          value: davenkatDB
+        - name: MYSQL_USER
+          value: davenkat
+        - name: MYSQL_PASSWORD
+          value: sql1234
+        

@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: exer1-alphine
+spec:
+  containers:
+    - name: alphine
+      image: alpine:3.15.0
+      args:
+        - "sleep"
+        - "1d"

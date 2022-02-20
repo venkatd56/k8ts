@@ -1,0 +1,12 @@
+---
+apiVersion: v1  
+kind: Pod
+metadata:
+  name: activity4-nginx
+spec:
+  containers:
+    - name: nginx
+      image: nginx:1.21
+      ports:
+        - containerPort: 80
+          protocol: 'TCP'
