@@ -12,8 +12,9 @@ spec:
       name: "Replica-demo"
   template:
     metadata:
-      app: "Jenkins"
-      version: "2.334"
+      labels:
+        app: "Jenkins"
+        version: "2.334"
       name: "Replica-demo"
     spec:
       containers:
