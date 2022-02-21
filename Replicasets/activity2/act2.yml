@@ -10,8 +10,9 @@ spec:
       version: "1.651.2"
   template:
     metadata:
-      app: "jenkins"
-      version: "1.651.2"
+      labels:
+        app: "jenkins"
+        version: "1.651.2"
     spec:
       containers:
         - name: jenkins
