@@ -23,9 +23,14 @@ kubectl get pods activity3 -w  # Watch specific pod
 kubectl exec -it activity2-sql -- /bin/bash
 
 kubectl describe pods activity1-nginx 
-
+#Port Forwarding
+ kubectl port-forward --address "0.0.0.0" activity1-replicaset-6s48f 8080:8080
 #labels
 kubectl get pods -o wide --show-labels
 kubectl get pods --selector="app=web" -wide
 kubectl get pods --selector="app=web" --show-labels -o wide
 kubectl get pods --selector="env in (prod,test,dev)" --show-labels -o wide
+
+#Replicaset
+
+kubectl get rs
