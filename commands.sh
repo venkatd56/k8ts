@@ -1,6 +1,6 @@
 # Kubectl Commands
 ssh-keygen -t rsa -f ~/.ssh/gcpkey -C davenkataz1 -b 2048  # Generating Keys
-ssh -i ~/.ssh/gcpkey davenkataz1@34.125.57.44 # Connecting to the VM
+ssh -i ~/.ssh/gcpkey davenkataz1@34.125.115.35 # Connecting to the VM
 
 curl http://localhost # check the application in the local host
 
@@ -32,5 +32,11 @@ kubectl get pods --selector="app=web" --show-labels -o wide
 kubectl get pods --selector="env in (prod,test,dev)" --show-labels -o wide
 
 #Replicaset
-
 kubectl get rs
+kubectl scale rs activity2-replicaset --replicas=4
+kubectl autoscale rs activity2-replicaset --min=2 --max=4 --cpu-percent=80
+kubectl get hpa
+
+#Namespace
+kubectl get namespace
+kubectl get po -n kube-system
