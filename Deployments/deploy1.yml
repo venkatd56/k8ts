@@ -10,8 +10,9 @@ spec:
       app: "test-app"
   template:
     metadata:
-      app: test-app
-      ver: "1.0.0"
+      labels:
+        app: test-app
+        ver: "1.0.0"
     spec:
       containers:
         - name: test-app
